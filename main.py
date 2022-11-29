@@ -9,6 +9,7 @@ O trabalho proposto envolvia codificar duas funções que devolvessem o n-ésimo
 fizesse de forma iterativa e outra que fizesse de maneira recursiva
 """
 
+
 # ITERATIVA
 def fibonacci_iterativo(num):
     if num > 0:
@@ -17,27 +18,24 @@ def fibonacci_iterativo(num):
         for n in range(num):
             if n < 2:
                 fib.append(1)
-                count_iterativo += 1
             else:
                 fib.append(fib[n-1] + fib[n-2])
-                count_iterativo += 1
+            count_iterativo += 1
         return f"Fibonacci sequence number: {fib[-1]}\nCount: {count_iterativo}"
     else:
         return f"Fibonacci sequence number: None\nCount: 0"
 
 
-
-
 count_recursivo = 0
+
 
 # RECURSIVA
 def fibonacci_recursivo(num):
     global count_recursivo
+    count_recursivo += 1
     if num == 0 or num == 1:
-        count_recursivo += 1
         return num
     else:
-        count_recursivo += 1
         return fibonacci_recursivo(num - 1) + fibonacci_recursivo(num - 2)
 
 
