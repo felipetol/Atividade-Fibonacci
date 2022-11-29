@@ -16,11 +16,11 @@ def fibonacci_iterativo(num):
         fib = []
         count_iterativo = 0
         for n in range(num):
+            count_iterativo += 1
             if n < 2:
                 fib.append(1)
             else:
                 fib.append(fib[n-1] + fib[n-2])
-            count_iterativo += 1
         return f"Fibonacci sequence number: {fib[-1]}\nCount: {count_iterativo}"
     else:
         return f"Fibonacci sequence number: None\nCount: 0"
